@@ -8,7 +8,7 @@
 @comment             Unofficial Texinfo Format
 @comment
 @set utfversion      2.diamondbond.6
-@set utfversiondate  July 19, 2022
+@set utfversiondate  June 19, 2022
 @comment
 @comment             This file is licensed under a Creative Commons
 @comment             Attribution-ShareAlike 4.0 International License
@@ -102,7 +102,7 @@
 @comment   Fixed broken links. Tinted chapter and section numbers.
 @comment   License updated to CC BY-SA 4.0.
 @comment
-@comment * Version 2.diamondbond.6 (July 19, 2022) by Diamond Bond.
+@comment * Version 2.diamondbond.6 (June 19, 2022) by Diamond Bond.
 @comment   2022 upbringing.
 
 @documentencoding UTF-8
