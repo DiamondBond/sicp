@@ -25,6 +25,8 @@ All the files in `html` directory, but not in subdirectories, will be overwritte
 
 You will need [Texinfo 5.1](https://ftp.gnu.org/gnu/texinfo), Perl 5.12 or later, Ruby 1.9.3 or newer, [Nokogiri](http://nokogiri.org) gem, [PhantomJS](http://phantomjs.org), and Internet connection to compile the book.
 
+If you are running Ubuntu then consider viewing [installdeps.sh](installdeps.sh).
+
 Acknowledgements
 ----------------
 
@@ -40,7 +42,7 @@ License
 -------
 
 The source file `sicp-pocket.texi,` HTML content of the book, and diagrams in directory `html/fig` are licensed under Creative Commons Attribution-ShareAlike 4.0 International License ([cc by-sa](https://creativecommons.org/licenses/by-sa/4.0)).
-          
+
 Most of the scripts are licensed under GNU General Public License version 3 (for details, see LICENSE.src).
 
 Fonts are under SIL Open Font License version 1.1. Other files, like Javascript libraries, have their own licenses.
