@@ -5,20 +5,23 @@
 <head>
 <title>Structure and Interpretation of Computer Programs, 2e: Chapter 2</title>
 
-<meta name="description" content="Structure and Interpretation of Computer Programs, 2e: Chapter 2" />
-<meta name="keywords" content="Structure and Interpretation of Computer Programs, 2e: Chapter 2" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="Generator" content="texi2any" />
-<meta charset="utf-8" />
-<link href="index.xhtml#Top" rel="start" title="Top" />
-<link href="Term-Index.xhtml#Term-Index" rel="index" title="Term Index" />
-<link href="index.xhtml#SEC_Contents" rel="contents" title="Table of Contents" />
-<link href="index.xhtml#Top" rel="prev" title="Top" />
-<link href="2_002e1.xhtml#g_t2_002e1" rel="next" title="2.1" />
-<link href="1_002e3.xhtml#g_t1_002e3_002e4" rel="prev" title="1.3.4" />
+<meta name="description" content="Structure and Interpretation of Computer Programs, 2e: Chapter 2"/>
+<meta name="keywords" content="Structure and Interpretation of Computer Programs, 2e: Chapter 2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="Generator" content="texi2any"/>
+<meta charset="utf-8"/>
+<link href="index.xhtml#Top" rel="start" title="Top"/>
+<link href="Term-Index.xhtml#Term-Index" rel="index" title="Term Index"/>
+<link href="index.xhtml#SEC_Contents" rel="contents" title="Table of Contents"/>
+<link href="index.xhtml#Top" rel="prev" title="Top"/>
+<link href="2_002e1.xhtml#g_t2_002e1" rel="next" title="2.1"/>
+<link href="1_002e3.xhtml#g_t1_002e3_002e4" rel="prev" title="1.3.4"/>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/prettify.css" rel="stylesheet" type="text/css" />
+
+<script class="prettifier" src="js/highlight/prettify.js" type="text/javascript"></script>
+<script class="prettifier" src="js/highlight/lang-lisp.js" type="text/javascript"></script>
 
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/footnotes.js" type="text/javascript"></script>
@@ -26,10 +29,10 @@
 </head>
 
 <body>
-<section><span class="top jump" title="Jump to top"><a href="#pagetop" accesskey="t">⇡</a></span><a id="pagetop"></a><a id="Chapter-2"></a>
+<section><span class="top jump" title="Jump to top"><a href="#pagetop" accesskey="t">&#8673;</a></span><a id="pagetop"></a><a id="Chapter-2"></a>
 <nav class="header">
 <p>
-Next: <a href="2_002e1.xhtml#g_t2_002e1" accesskey="n" rel="next">2.1</a>, Prev: <a href="1_002e3.xhtml#g_t1_002e3" accesskey="p" rel="prev">1.3</a>, Up: <a href="index.xhtml#Top" accesskey="u" rel="prev">Top</a>   [<a href="index.xhtml#SEC_Contents" title="Table of contents" accesskey="c" rel="contents">Contents</a>]</p>
+Next: <a href="2_002e1.xhtml#g_t2_002e1" accesskey="n" rel="next">2.1</a>, Prev: <a href="1_002e3.xhtml#g_t1_002e3" accesskey="p" rel="prev">1.3</a>, Up: <a href="index.xhtml#Top" accesskey="u" rel="prev">Top</a> &#160; [<a href="index.xhtml#SEC_Contents" title="Table of contents" accesskey="c" rel="contents">Contents</a>]</p>
 </nav>
 <a id="Building-Abstractions-with-Data"></a>
 <h2 class="chapter"><span class="chapnum">2</span><span class="chaptitle">Building Abstractions with Data</span></h2>
@@ -108,39 +111,16 @@ abstraction makes programs much easier to design, maintain, and modify.
 </p>
 <p>The use of compound data leads to a real increase in the expressive
 power of our programming language.  Consider the idea of forming a
-“linear combination” <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow class="MJX-TeXAtom-ORD">
-    <mi>a</mi>
-    <mi>x</mi>
-    <mo>+</mo>
-    <mi>b</mi>
-    <mi>y</mi>
-  </mrow>
-</math>.  We might like to write
-a procedure that would accept <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>a</mi>
-</math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>b</mi>
-</math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
-</math>, and <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>y</mi>
-</math> as
-arguments and return the value of <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow class="MJX-TeXAtom-ORD">
-    <mi>a</mi>
-    <mi>x</mi>
-    <mo>+</mo>
-    <mi>b</mi>
-    <mi>y</mi>
-  </mrow>
-</math>.  This
+“linear combination” \( {ax + by} \).  We might like to write
+a procedure that would accept \( a \), \( b \), \( x \), and \( y \) as
+arguments and return the value of \( {ax + by} \).  This
 presents no difficulty if the arguments are to be numbers, because we
 can readily define the procedure
 </p>
 <div class="lisp">
-<pre class="lisp prettyprinted" style=""><span class="opn">(</span><span class="kwd">define</span><span class="pln"> </span><span class="opn">(</span><span class="pln">linear-combination a b x y</span><span class="clo">)</span><span class="pln">
-  </span><span class="opn">(</span><span class="pun">+</span><span class="pln"> </span><span class="opn">(</span><span class="pun">*</span><span class="pln"> a x</span><span class="clo">)</span><span class="pln"> </span><span class="opn">(</span><span class="pun">*</span><span class="pln"> b y</span><span class="clo">)))</span></pre></div>
+<pre class="lisp">(define (linear-combination a b x y)
+  (+ (* a x) (* b y)))
+</pre></div>
 
 <p>But suppose we are not concerned only with numbers.  Suppose we would like to
 express, in procedural terms, the idea that one can form linear combinations
@@ -149,8 +129,9 @@ complex numbers, polynomials, or whatever.  We could express this as a
 procedure of the form
 </p>
 <div class="lisp">
-<pre class="lisp prettyprinted" style=""><span class="opn">(</span><span class="kwd">define</span><span class="pln"> </span><span class="opn">(</span><span class="pln">linear-combination a b x y</span><span class="clo">)</span><span class="pln">
-  </span><span class="opn">(</span><span class="pln">add </span><span class="opn">(</span><span class="pln">mul a x</span><span class="clo">)</span><span class="pln"> </span><span class="opn">(</span><span class="pln">mul b y</span><span class="clo">)))</span></pre></div>
+<pre class="lisp">(define (linear-combination a b x y)
+  (add (mul a x) (mul b y)))
+</pre></div>
 
 <p>where <code>add</code> and <code>mul</code> are not the primitive procedures <code>+</code> and
 <code>*</code> but rather more complex things that will perform the appropriate
@@ -211,7 +192,7 @@ implement <a id="index-generic-operations"></a>
 of data.  Maintaining modularity in the presence of generic operations requires
 more powerful abstraction barriers than can be erected with simple data
 abstraction alone.  In particular, we introduce <a id="index-data_002ddirected-programming"></a>
-<em>data-directed programming</em> 
+<em>data-directed programming</em>
 as a technique that allows individual data representations to be
 designed in isolation and then combined <a id="index-additively"></a>
 <em>additively</em> (i.e., without
@@ -228,7 +209,7 @@ numbers, and even other polynomials.
 <div id="FOOT67"><p><a class="footnote_backlink" href="#DOCF67"><sup>67</sup></a>
 The
 ability to directly manipulate procedures provides an analogous increase in the
-expressive power of a programming language.  For example, in 
+expressive power of a programming language.  For example, in
 <a href="1_002e3.xhtml#g_t1_002e3_002e1">1.3.1</a> we introduced the <code>sum</code> procedure, which takes a procedure
 <code>term</code> as an argument and computes the sum of the values of <code>term</code>
 over some specified interval.  In order to define <code>sum</code>, it is crucial
@@ -243,10 +224,10 @@ more primitive operations are irrelevant.</p>
 </div>
 <nav class="header">
 <p>
-Next: <a href="2_002e1.xhtml#g_t2_002e1" accesskey="n" rel="next">2.1</a>, Prev: <a href="1_002e3.xhtml#g_t1_002e3" accesskey="p" rel="prev">1.3</a>, Up: <a href="index.xhtml#Top" accesskey="u" rel="prev">Top</a>   [<a href="index.xhtml#SEC_Contents" title="Table of contents" accesskey="c" rel="contents">Contents</a>]</p>
+Next: <a href="2_002e1.xhtml#g_t2_002e1" accesskey="n" rel="next">2.1</a>, Prev: <a href="1_002e3.xhtml#g_t1_002e3" accesskey="p" rel="prev">1.3</a>, Up: <a href="index.xhtml#Top" accesskey="u" rel="prev">Top</a> &#160; [<a href="index.xhtml#SEC_Contents" title="Table of contents" accesskey="c" rel="contents">Contents</a>]</p>
 </nav>
 
 
-</section><span class="bottom jump" title="Jump to bottom"><a href="#pagebottom" accesskey="b">⇣</a></span><a id="pagebottom"></a>
+</section><span class="bottom jump" title="Jump to bottom"><a href="#pagebottom" accesskey="b">&#8675;</a></span><a id="pagebottom"></a>
 </body>
 </html>
